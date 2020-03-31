@@ -1,0 +1,44 @@
+Inside the Pedal:
+https://youtu.be/5gexR87thRY
+
+- Usar somente pilhas AAA de lítio, alcalina não (manual)
+
+
+
+BLE_Powertap
+
+
+Protocolo bluetooth BLE
+Biblioteca do modulo BLE
+
+Trabalha por serviços, cada um tem characteristics, definas por um código 0x2A63 por exemplo
+
+Pra ativar tem que colocar no modo notify, ir no UUID próprio
+
+Dentro da caracteristica tem varios UUIDs
+
+No 2A63 tem ativar ou não o controle da força, como são representados os dados de forças etc... Esses são UUIDs
+
+
+master.py:
+
+stre - instancia
+
+pygatt - biblioteca pro BLE
+BGAPI - 
+
+TYPE - varias formas de conectar, random é a que funciona
+
+adapter.start() - começa o dongle, tenta conexao
+
+
+strength.py
+
+def notify:
+"00002a63-0000-1000-8000-00805f9b34fb" - UUID
+
+32 bits de informação
+
+
+msg_strngth = int( ... , 16) - hexa para int
+8,9 da revolucao
