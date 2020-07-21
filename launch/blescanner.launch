@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-
-<launch>
-
-  <node pkg="ble_scanner" type="blerun" name="scanner1" output="screen" required="true" args="$(find ble_scanner)/src/scripts/scanner1.py"/>
-
-
-
-</launch>
